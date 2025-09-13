@@ -1,0 +1,33 @@
+/* .product{
+color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: larger;
+  font-family: lucida sans;
+  padding-left: 8px;
+   border: solid;
+   margin-left: 16px;
+   border-radius: 8px;
+   border-color: aqua;
+  
+} */
+
+.l1{
+  color: rgb(131, 131, 238);
+  
+}
+
+.l2{
+  color: rgb(136, 221, 136);
+}
+
+.l3{
+  color: rgb(8, 100, 88);
+}
+
+.s2{
+  color: red;
+}
+
+.s1{
+  color: green;
+}
