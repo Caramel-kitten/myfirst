@@ -1,4 +1,4 @@
-/* .product{
+.product{
 color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: larger;
@@ -9,7 +9,7 @@ color: rgb(0, 0, 0);
    border-radius: 8px;
    border-color: aqua;
   
-} */
+} 
 
 .l1{
   color: rgb(131, 131, 238);

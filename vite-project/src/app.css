@@ -1,8 +1,8 @@
-.container{
-  display: flex; 
+.Maincontainer{
+  
   justify-content: center;
   align-items: center;
-   border: 2px;
+  border: 2px;
   border-color: black;
  
 }

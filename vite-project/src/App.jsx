@@ -1,20 +1,60 @@
-// import Profile from "./Profile.jsx"
-import Productcard from "./ProductCard.jsx"
-import "./productcard.css"
 import "./app.css"
-import UserAvatar from "./UserAvatar.jsx"
-import "./UserAvatar.css"
+import ButtonClick from "./ButtonClick.jsx"
+import { useState } from "react"
 function App() {
-  const product1 = { product: "football", price: 20, instock: true }
-  const product2 = { product: "shoes", price: 30, instock: false }
-  const Person1 = { namee: "G.ASWIN", course: "B-Tech", roll: "24VV1A0522", DOB: "14/06/2006" }
+
+  const handleClick = (name) => {
+    alert('hello,' + name)
+  }
+
+  const [formdata,setformdata] = useState({
+    email:"",
+    password:""
+})
+
+  const handleChange = (event) => {
+    console.log(event.target.name)
+    console.log(event.target.value)
+    setformdata(
+      {
+        ...formdata,
+        [event.target.name]: event.target.value
+      }
+    )
+  }
+
+  const handleSubmit =(event) => {
+    event.preventDefault()
+    alert(`email: ${formdata.email} \n password: ${formdata.password} \n you are logged in`)
+  }
 
 
+  
+  const [password,setpassword] = useState("")
+  const [email,setemail] = useState("")
+  const [count,setcount] = useState(0)
+
+  const handleincrement =() =>{
+    setcount((prevcount) => prevcount+1)
+    console.log(count)
+  }
+
+  const handleemail =(event) =>{
+    setemail(event.target.value)
+  }
+
+  const handlepassword =(event) =>{
+    setpassword(event.target.value)
+  }
   return (
-    <div className="container">
-      <Productcard product={product1} />
-      <Productcard product={product2} />
-      {/* <UserAvatar Person={Person1} /> */}
+    <div className="Maincontainer">
+        <form onSubmit={handleSubmit}> 
+        <p>type your email</p>
+        <input type="text" name="email" placeholder="type your email" onChange={handleChange} />
+        <input type="text" name="password" placeholder="password" onChange={handleChange} />
+        <button type="submit">login</button> 
+        <button onClick={handleincrement}>increment</button>
+       </form> 
     </div>
   )
 }
